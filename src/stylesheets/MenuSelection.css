@@ -1,0 +1,57 @@
+.menu_selection {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    align-items: center;
+    margin-top:30px;
+    margin-bottom:30px;
+    color: #545454;
+    padding-left: calc(100% - 300px);
+
+}
+
+.icon {
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    padding-right: 20px;
+}
+.icon-wrapper {
+    display: flex;
+}
+
+.text {
+    font-weight: 300;
+}
+
+
+.square-1 {
+    width: 50px; /* Set the desired size of the square */
+    height: 50px; /* Set the desired size of the square */
+    border: 2px solid white; /* Border color for the square */
+    transition: transform 0.5s ease; /* Add a transition for smooth rotation */
+    position: relative;
+    left: 51.5px;
+}
+
+
+
+.square-2 {
+    width: 50px; /* Set the desired size of the square */
+    height: 50px; /* Set the desired size of the square */
+    border: 2px solid white; /* Border color for the square */
+    transform: rotate(45deg);
+    transition: transform 0.5s ease; /* Add a transition for smooth rotation */
+    position: relative;
+
+    left:105px;
+}
+
+.menu_selection:hover > .square-1 {
+    transform: rotate(45deg);
+}
+
+.menu_selection:hover > .square-2 {
+    transform: rotate(135deg);
+}
+

@@ -1,6 +1,107 @@
 .App {
-  text-align: center;
+  background: linear-gradient(180deg,#ffffff, #a6a6a6);
+  height: 100vh;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
+
+.header-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 45px;
+  background: linear-gradient(90deg,#5de0d6, #004aad);
+  padding-right: calc(100% - 130px);
+  text-align: right;
+  justify-content: center;
+  color: white;
+}
+
+.screen-container {
+  height: calc(100vh - 45px);
+}
+
+.column-container {
+  flex: 11;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.column {
+  flex: 1; /* Each column takes up equal space */
+  height: 100%;
+}
+
+.middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-right {
+  flex: 8;
+  background-color: rgba(84, 84, 84, 0.17);
+  box-sizing: border-box;
+  padding: 5px;
+  padding-top: 20px;
+  padding-left: 20px;
+  overflow: hidden;
+}
+.column-left {
+  flex: 4;
+}
+
+.menu-container {
+  margin-top: 20%;
+}
+
+.clean-header {
+  margin: 0;
+  font-weight: 300;
+}
+
+.display-header {
+  color:#1e1d8b;
+}
+
+.text-container {
+  overflow-y: scroll;
+  height: calc(100% - 50px);
+}
+
+.text-container::-webkit-scrollbar {
+  width: 5px;
+  margin-left: 10px;
+}
+
+.text-container::-webkit-scrollbar-thumb {
+  background: #004aad;
+
+}
+.text-container::-webkit-scrollbar-track {
+}
+
+.text-container::-webkit-scrollbar-thumb:hover {
+  background: #0264e4;
+}
+
+.opacity-50 {
+  opacity: .5;
+}
+
+/* flex: 1;
+  padding: 10px;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 10px;
+  background-color: #282c34;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); */
 
 .App-logo {
   height: 40vmin;
@@ -14,7 +115,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
