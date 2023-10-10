@@ -3,18 +3,19 @@
     flex-direction: row;
     border-radius: 10px;
     align-items: center;
-    margin-top:30px;
-    margin-bottom:30px;
+    margin-top:12%;
+    margin-bottom:12%;
     color: #545454;
-    padding-left: calc(100% - 300px);
-
+    padding-left: 25%;
+    position: relative;
 }
 
 .icon {
     margin: 10px;
     width: 30px;
     height: 30px;
-    padding-right: 20px;
+    padding-right: 30px;
+    padding-left: 2px;
 }
 .icon-wrapper {
     display: flex;
@@ -24,17 +25,35 @@
     font-weight: 300;
 }
 
+.position-relative {
+    position: relative;
+    left: 50px;
+  }
+  
+  .menu-selection-hover {
+    width: 77px;
+    height: 77px;
+    position: absolute;
+    top: -13px;
+    right: 134px;
+    border-radius: 50%;
+    z-index: 101;
+  }
+
+  .menu-text-selection-hover {
+    top: 15px;
+    right: 10px;
+    border-radius: 50%;
+    z-index: 101;
+  }
 
 .square-1 {
     width: 50px; /* Set the desired size of the square */
     height: 50px; /* Set the desired size of the square */
     border: 2px solid white; /* Border color for the square */
     transition: transform 0.5s ease; /* Add a transition for smooth rotation */
-    position: relative;
-    left: 51.5px;
+    position: absolute;
 }
-
-
 
 .square-2 {
     width: 50px; /* Set the desired size of the square */
@@ -42,16 +61,37 @@
     border: 2px solid white; /* Border color for the square */
     transform: rotate(45deg);
     transition: transform 0.5s ease; /* Add a transition for smooth rotation */
-    position: relative;
-
-    left:105px;
+    position: absolute;
+}
+.menu-selection-hover:hover {
+    cursor: pointer;
 }
 
-.menu_selection:hover > .square-1 {
+.text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.menu-selection-hover:hover ~ .square-1 {
     transform: rotate(45deg);
 }
 
-.menu_selection:hover > .square-2 {
+.menu-selection-hover:hover ~ .square-2 {
     transform: rotate(135deg);
 }
 
+.menu-selection-hover:hover + .text {
+    text-decoration: underline;
+}
+
+.text:hover ~ .square-1 {
+    transform: rotate(45deg);
+}
+
+.text:hover ~ .square-2 {
+    transform: rotate(135deg);
+}
+
+
+
+  
