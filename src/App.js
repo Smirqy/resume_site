@@ -44,10 +44,10 @@ function App() {
         <div className="column-container">
           <div className="column column-left">
             <div className="menu-container">
-              <MenuSelection icon="user" title="ABOUT" setSection={setCurrSection}/>
-              <MenuSelection icon="academics" title="ACADEMICS" setSection={setCurrSection}/>
-              <MenuSelection icon="projects" title="PROJECTS" setSection={setCurrSection}/>
-              <MenuSelection icon="resume" title="RESUME" setSection={setCurrSection}/>
+              <MenuSelection icon="user" title="ABOUT" setSection={setCurrSection} currSection={currSection}/>
+              <MenuSelection icon="academics" title="ACADEMICS" setSection={setCurrSection} currSection={currSection}/>
+              <MenuSelection icon="projects" title="PROJECTS" setSection={setCurrSection} currSection={currSection}/>
+              <MenuSelection icon="resume" title="RESUME" setSection={setCurrSection} currSection={currSection}/>
             </div>
           </div>
           <div className="column column-right">

@@ -6,7 +6,7 @@ import React from 'react';
 
 
 function MenuSelection(props) {
-    const {icon, title, setSection} = props;
+    const {icon, title, setSection, currSection} = props;
 
     const getIcon = () => {
         if(icon === "user"){
@@ -31,6 +31,32 @@ function MenuSelection(props) {
         }
     }
 
+    const getSquare1 = () => {
+        if(currSection === title.toLowerCase()) {
+            return (
+                <div className="square-1 rotate-45"></div>
+            );
+        }
+        else {
+            return (
+                <div className="square-1"></div>
+            );
+        }
+    }
+
+    const getSquare2 = () => {
+        if(currSection === title.toLowerCase()) {
+            return (
+                <div className="square-2 rotate-135"></div>
+            );
+        }
+        else {
+            return (
+                <div className="square-2"></div>
+            );
+        }
+    }
+
     const handleClick = () => {
         setSection(title.toLowerCase());
     }
@@ -41,8 +67,9 @@ function MenuSelection(props) {
             {getIcon()}
             <div className="menu-selection-hover" onClick={() => handleClick()}></div>
             <h3 className='clean-header text' onClick={() => handleClick()}>{title}</h3>
-            <div className="square-2"></div>
-            <div className="square-1"></div>
+            
+            {getSquare2()}
+            {getSquare1()}
 
         </div>
     );

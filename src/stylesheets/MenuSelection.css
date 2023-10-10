@@ -87,4 +87,11 @@
     margin-top: 0px;
 }
 
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+.rotate-135 {
+    transform: rotate(135deg);
+}
   
