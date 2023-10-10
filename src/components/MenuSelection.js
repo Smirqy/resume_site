@@ -33,16 +33,12 @@ function MenuSelection(props) {
 
     return (
         
-        <div className="menu_selection">
+        <div className="menu_selection" >
             {getIcon()}
             <div className="menu-selection-hover"></div>
             <h3 className='clean-header text'>{title}</h3>
             <div className="square-2"></div>
             <div className="square-1"></div>
-            
-
-            
-
 
         </div>
     );

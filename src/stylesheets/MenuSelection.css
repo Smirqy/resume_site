@@ -3,11 +3,10 @@
     flex-direction: row;
     border-radius: 10px;
     align-items: center;
-    margin-top:12%;
-    margin-bottom:12%;
-    color: #545454;
-    padding-left: 25%;
+    color: rgb(41 40 40);
     position: relative;
+    cursor: pointer;
+    font-size: small;
 }
 
 .icon {
@@ -22,7 +21,8 @@
 }
 
 .text {
-    font-weight: 400;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .position-relative {
@@ -30,21 +30,21 @@
     left: 50px;
   }
   
-  .menu-selection-hover {
-    width: 79px;
-    height: 79px;
+.menu-selection-hover {
+    width: 77px;
+    height: 77px;
     position: absolute;
     top: -14px;
-    left: 22.3%;
+    left: -11px;
     border-radius: 50%;
     z-index: 101;
-  }
+}
 
 .square-1 {
     width: 50px; /* Set the desired size of the square */
     height: 50px; /* Set the desired size of the square */
     border: 2px solid white; /* Border color for the square */
-    transition: transform 0.5s ease; /* Add a transition for smooth rotation */
+    transition: transform 0.3s ease; /* Add a transition for smooth rotation */
     position: absolute;
 }
 
@@ -53,17 +53,14 @@
     height: 50px; /* Set the desired size of the square */
     border: 2px solid white; /* Border color for the square */
     transform: rotate(45deg);
-    transition: transform 0.5s ease; /* Add a transition for smooth rotation */
+    transition: transform 0.3s ease; /* Add a transition for smooth rotation */
     position: absolute;
 }
+
 .menu-selection-hover:hover {
-    cursor: pointer;
+    
 }
 
-.text:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
 
 .menu-selection-hover:hover ~ .square-1 {
     transform: rotate(45deg);
@@ -73,9 +70,6 @@
     transform: rotate(135deg);
 }
 
-.menu-selection-hover:hover + .text {
-    text-decoration: underline;
-}
 
 .text:hover ~ .square-1 {
     transform: rotate(45deg);
@@ -85,6 +79,12 @@
     transform: rotate(135deg);
 }
 
+.no-margin-bottom {
+    margin-bottom: 0px;
+}
 
+.no-margin-top {
+    margin-top: 0px;
+}
 
   

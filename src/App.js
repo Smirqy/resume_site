@@ -6,23 +6,23 @@ function App() {
   return (
     <div className="App">
       <div className="header-container">
-        <h3 className='clean-header'>Noah Carlson</h3>
-        <h5 className='clean-header opacity-50'>Software Engineer</h5>
+        <h3 className='clean-header font-weight-300'>Noah Carlson</h3>
+        <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5>
       </div>
       <div className="screen-container">
         <div className="column-container">
           <div className="column column-left">
             <div className="menu-container">
-              <MenuSelection icon="user" title="ABOUT" />
+              <MenuSelection icon="user" title="ABOUT"/>
               <MenuSelection icon="academics" title="ACADEMICS" />
               <MenuSelection icon="projects" title="PROJECTS" />
-              <MenuSelection icon="resume" title="RESUME" />
+              <MenuSelection icon="resume" title="RESUME"/>
             </div>
           </div>
           <div className="column column-right">
             <h3 className="left clean-header display-header">ABOUT</h3>
             <div className='text-container'>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani </p>
+              <p className='display-text'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani </p>
             </div>
           </div>
         </div>
