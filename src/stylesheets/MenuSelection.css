@@ -11,9 +11,9 @@
 
 .icon {
     margin: 10px;
-    width: 30px;
-    height: 30px;
-    padding-right: 30px;
+    width: 25px;
+    height: 25px;
+    padding-right: 20px;
     padding-left: 2px;
 }
 .icon-wrapper {
@@ -41,26 +41,23 @@
 }
 
 .square-1 {
-    width: 50px; /* Set the desired size of the square */
-    height: 50px; /* Set the desired size of the square */
+    width: 40px; /* Set the desired size of the square */
+    height: 40px; /* Set the desired size of the square */
     border: 2px solid white; /* Border color for the square */
     transition: transform 0.3s ease; /* Add a transition for smooth rotation */
+    left: 2.5px;
     position: absolute;
 }
 
 .square-2 {
-    width: 50px; /* Set the desired size of the square */
-    height: 50px; /* Set the desired size of the square */
+    width: 40px; /* Set the desired size of the square */
+    height: 40px; /* Set the desired size of the square */
     border: 2px solid white; /* Border color for the square */
     transform: rotate(45deg);
     transition: transform 0.3s ease; /* Add a transition for smooth rotation */
+    left: 2.5px;
     position: absolute;
 }
-
-.menu-selection-hover:hover {
-    
-}
-
 
 .menu-selection-hover:hover ~ .square-1 {
     transform: rotate(45deg);

@@ -67,7 +67,6 @@ function MenuSelection(props) {
             {getIcon()}
             <div className="menu-selection-hover" onClick={() => handleClick()}></div>
             <h3 className='clean-header text' onClick={() => handleClick()}>{title}</h3>
-            
             {getSquare2()}
             {getSquare1()}
 

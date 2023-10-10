@@ -37,8 +37,9 @@ function App() {
   return (
     <div className="App">
       <div className="header-container">
-        <h3 className='clean-header font-weight-300'>Noah Carlson</h3>
-        <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5>
+        <h3 className='clean-header font-weight-300'>NOAH CARLSON<span className="subHeader-text"> /* software developer */</span></h3>
+        
+        {/* <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5> */}
       </div>
       <div className="screen-container">
         <div className="column-container">
