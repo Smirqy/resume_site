@@ -6,7 +6,7 @@ import React from 'react';
 
 
 function MenuSelection(props) {
-    const {icon, title} = props;
+    const {icon, title, setSection} = props;
 
     const getIcon = () => {
         if(icon === "user"){
@@ -31,12 +31,16 @@ function MenuSelection(props) {
         }
     }
 
+    const handleClick = () => {
+        setSection(title.toLowerCase());
+    }
+
     return (
         
         <div className="menu_selection" >
             {getIcon()}
-            <div className="menu-selection-hover"></div>
-            <h3 className='clean-header text'>{title}</h3>
+            <div className="menu-selection-hover" onClick={() => handleClick()}></div>
+            <h3 className='clean-header text' onClick={() => handleClick()}>{title}</h3>
             <div className="square-2"></div>
             <div className="square-1"></div>
 

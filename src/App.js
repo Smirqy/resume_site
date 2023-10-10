@@ -1,8 +1,39 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import MenuSelection from './components/MenuSelection';
+import AboutSection from './components/AboutSectionComponent';
+import AcademicsSection from './components/AcademicsSectionComponent';
+import ProjectsSection from './components/ProjectsSectionComponent';
+import ResumeSection from './components/ResumeSectionComponent';
 import './App.css';
 
 function App() {
+
+ const [currSection, setCurrSection] = useState('about');
+
+  const getSection = () => {
+    console.log("SETTING SECTION ", currSection);
+    if(currSection === 'about') {
+      return (
+        <AboutSection />
+      );
+    }
+    else if(currSection === 'academics') {
+      return (
+        <AcademicsSection />
+      );
+    }
+    else if(currSection === 'projects') {
+      return (
+        <ProjectsSection />
+      );
+    }
+    else if(currSection === 'resume') {
+      return (
+        <ResumeSection />
+      );
+    }
+  }
+
   return (
     <div className="App">
       <div className="header-container">
@@ -13,16 +44,16 @@ function App() {
         <div className="column-container">
           <div className="column column-left">
             <div className="menu-container">
-              <MenuSelection icon="user" title="ABOUT"/>
-              <MenuSelection icon="academics" title="ACADEMICS" />
-              <MenuSelection icon="projects" title="PROJECTS" />
-              <MenuSelection icon="resume" title="RESUME"/>
+              <MenuSelection icon="user" title="ABOUT" setSection={setCurrSection}/>
+              <MenuSelection icon="academics" title="ACADEMICS" setSection={setCurrSection}/>
+              <MenuSelection icon="projects" title="PROJECTS" setSection={setCurrSection}/>
+              <MenuSelection icon="resume" title="RESUME" setSection={setCurrSection}/>
             </div>
           </div>
           <div className="column column-right">
-            <h3 className="left clean-header display-header">ABOUT</h3>
+            <h3 className="left clean-header display-header">{currSection.toUpperCase()}</h3>
             <div className='text-container'>
-              <p className='display-text'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani </p>
+              {getSection()}
             </div>
           </div>
         </div>
