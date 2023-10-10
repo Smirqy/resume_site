@@ -22,7 +22,7 @@
 }
 
 .text {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .position-relative {
@@ -31,18 +31,11 @@
   }
   
   .menu-selection-hover {
-    width: 77px;
-    height: 77px;
+    width: 79px;
+    height: 79px;
     position: absolute;
-    top: -13px;
-    right: 134px;
-    border-radius: 50%;
-    z-index: 101;
-  }
-
-  .menu-text-selection-hover {
-    top: 15px;
-    right: 10px;
+    top: -14px;
+    left: 22.3%;
     border-radius: 50%;
     z-index: 101;
   }

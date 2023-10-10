@@ -62,11 +62,11 @@
 
 .clean-header {
   margin: 0;
-  font-weight: 300;
 }
 
 .display-header {
   color:#1e1d8b;
+  font-display: bold;
 }
 
 .text-container {
