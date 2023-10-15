@@ -4,6 +4,8 @@ import AboutSection from './components/AboutSectionComponent';
 import AcademicsSection from './components/AcademicsSectionComponent';
 import ProjectsSection from './components/ProjectsSectionComponent';
 import ResumeSection from './components/ResumeSectionComponent';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 function App() {
@@ -37,7 +39,9 @@ function App() {
   return (
     <div className="App">
       <div className="header-container">
-        <h3 className='clean-header font-weight-300'>NOAH CARLSON<span className="subHeader-text"> /* software developer */</span></h3>
+        <h3 className='clean-header font-weight-300'>NOAH CARLSON<span className="subHeader-text"> LEVEL 22
+          <FontAwesomeIcon icon={faCaretDown} className='subheader-icon' size=''/>
+        </span></h3>
         
         {/* <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5> */}
       </div>
@@ -50,6 +54,14 @@ function App() {
               <MenuSelection icon="projects" title="PROJECTS" setSection={setCurrSection} currSection={currSection}/>
               <MenuSelection icon="resume" title="RESUME" setSection={setCurrSection} currSection={currSection}/>
             </div>
+          
+          </div>
+          <div className="column column-middle">
+            <img className="shadow" src={process.env.PUBLIC_URL + '/shadow2.png'} alt="Shadow" />
+            <img className="character" src={process.env.PUBLIC_URL + '/character300new.gif'} alt="Character" />
+
+
+
           </div>
           <div className="column column-right">
             <h3 className="left clean-header display-header">{currSection.toUpperCase()}</h3>

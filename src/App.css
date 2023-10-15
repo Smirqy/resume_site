@@ -1,8 +1,25 @@
 .App {
-  background: linear-gradient(180deg,#ffffff, #a6a6a6);
+  background: linear-gradient(180deg, #ffffff, #777777);
+  background-repeat: no-repeat;
   height: 100vh;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
+  position: relative;
+
+&::before {
+  content: '';
+  background-image: url(/public/moderncity.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
+}
+
 }
 
 .header-container {
@@ -14,10 +31,11 @@
     color: white;
     padding-left: 10px;
     font-size: 13px;
+    position: relative;
 }
 
 .subHeader-text {
-  color:#a6a6a6;
+  color:#bebebe;
   opacity: .8;
   font-size: 13px;
 }
@@ -49,8 +67,8 @@
 }
 
 .column-right {
-  flex: 8;
-  background-color: rgba(133, 133, 133, 0.17);
+  flex: 2;
+  background-color: rgba(235, 235, 235, 0.90);
   box-sizing: border-box;
   padding: 5px;
   padding:20px;
@@ -58,10 +76,17 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   height: calc(100% - 40px);
   margin:20px;
+  position: relative;
+}
+.column-middle {
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .column-left {
-  flex: 4;
+  flex: 1;
   display: flex;
   justify-content: center;
 }
@@ -88,6 +113,7 @@
   overflow-y: scroll;
   height: calc(100% - 50px);
   font-weight: 400;
+  font-size: 13px;
 }
 
 .text-container::-webkit-scrollbar {
@@ -118,4 +144,19 @@
   font-weight: 300;
 }
 
+.character {
+  position: absolute;
+  height: 80%;
+  
+}
 
+.shadow {
+  position: absolute;
+  height: 15%;
+  top: 81%;
+  opacity: 50%;
+}
+
+.subheader-icon {
+  margin-left: 3px;
+}
