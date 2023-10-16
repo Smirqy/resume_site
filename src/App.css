@@ -30,7 +30,6 @@
     background: linear-gradient(90deg, #02306c, #092147);
     color: white;
     padding-left: 10px;
-    font-size: 13px;
     position: relative;
 }
 
@@ -106,14 +105,12 @@
 
 .display-text {
   font-weight: 400;
-  font-size: 14px;
 }
 
 .text-container {
   overflow-y: scroll;
   height: calc(100% - 50px);
   font-weight: 400;
-  font-size: 13px;
 }
 
 .text-container::-webkit-scrollbar {

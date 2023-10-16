@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <div className="header-container">
-        <h3 className='clean-header font-weight-300'>NOAH CARLSON<span className="subHeader-text"> LEVEL 22
+        <h3 className='clean-header font-weight-300'>NOAH CARLSON <span className="subHeader-text"> LEVEL 22
           <FontAwesomeIcon icon={faCaretDown} className='subheader-icon' size=''/>
         </span></h3>
         

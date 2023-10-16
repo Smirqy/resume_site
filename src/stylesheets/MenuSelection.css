@@ -6,7 +6,7 @@
     color: rgb(41 40 40);
     position: relative;
     cursor: pointer;
-    font-size: small;
+    font-size: large;
 }
 
 .icon {
@@ -26,13 +26,11 @@
 .text {
     font-weight: 500;
     cursor: pointer;
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    /* border-radius: 10px; */
     text-shadow:
-    .7px .7px 0 #4b4a4a,
-    -.7px .7px 0 #4b4a4a,
-    -.7px -.7px 0 #4b4a4a,
-    .7px -.7px 0 #4b4a4a;
+    1px 1px 0 #4b4a4a,
+    -1px 1px 0 #4b4a4a,
+    -1px -1px 0 #4b4a4a,
+    1px -1px 0 #4b4a4a;
     color: white;
 }
 

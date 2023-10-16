@@ -1,9 +1,9 @@
 function AboutSection() {
     return (
     <div>
-        <p> Hello I am Noah Carlson and this is my portfolio website. These pages will show you
-        about who I am and what I have accomplished. I have found my passion to be computer science
-        which allows me to explore my creative and technical capabilities. </p>
+        <p> Hi there I am Noah Carlson and welcome to my portfolio site! Hopefully after looking around you will have a better idea of who I am and what I've done.
+          As of right now I am a fifth year computer science student looking for software engineering opportunites. I am currently a University TA for the CS 1020 course
+          and am also exploring extra curricular projects such as this website. </p>
      </div>
     );
 }
