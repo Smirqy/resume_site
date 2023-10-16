@@ -5,20 +5,10 @@
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   position: relative;
-
-&::before {
-  content: '';
   background-image: url(/public/moderncity.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: top center;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 1;
-}
 
 }
 
