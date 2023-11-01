@@ -50,8 +50,8 @@ function App() {
       <div className="screen-container">
         <div className="model-container">
           <div className='model-selection' onClick={() => {setIndexMethod(4);}}/>
-          <CharacterModel />
-        </div>
+            <CharacterModel />
+          </div>
         <div className="column-container">
           <div className="column column-left">
             <div className="menu-container">

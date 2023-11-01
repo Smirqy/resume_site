@@ -9,7 +9,7 @@ const idle = 3;
 const wave = 4;
 const bored = 2;
 function Model(props) {
-    const avatar = useGLTF("/NoahAvatar_animation.glb");
+    const avatar = useGLTF("NoahAvatar_animation.glb");
     const {actions, names} = useAnimations(avatar.animations, avatar.scene);
     const [index, setIndex] = useState(0);
     const [isWaving, setIsWaving] = useState(false);
@@ -74,7 +74,7 @@ export default function CharacterModel() {
         <Canvas dpr={[1,2]} shadowMap shadows camera={{fov:20}}>
             <ambientLight intensity={2.1}/>
             <pointLight position={[1,1,1]} intensity={4} castShadow shadow-mapSize-height={512} shadow-mapSize-width={512}/>
-            <Suspense fallback={<CharLoading />}>
+            <Suspense>
                 <Model scale={.75} position-y={-.7} position-x={-.5} rotation-x={0} rotation-y={0.2} rotation-z={0} castShadow/>
             </Suspense>
             <OrbitControls enabled={false}/>
