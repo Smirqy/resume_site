@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import { useGLTF, OrbitControls, useAnimations} from '@react-three/drei';
 import { useEffect, useState} from 'react';
+import modelUrl from '../assets/NoahAvatar_animation.glb';
 
 export var setIndexMethod = null;
 
@@ -8,7 +9,7 @@ const idle = 3;
 const wave = 4;
 const bored = 2;
 function Model(props) {
-    const avatar = useGLTF(process.env.PUBLIC_URL + "/NoahAvatar_animation.glb");
+    const avatar = useGLTF(modelUrl);
     const {actions, names} = useAnimations(avatar.animations, avatar.scene);
     const [index, setIndex] = useState(0);
     const [isWaving, setIsWaving] = useState(false);
