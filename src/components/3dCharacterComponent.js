@@ -13,21 +13,21 @@ function Model(props) {
     const {actions, names} = useAnimations(avatar.animations, avatar.scene);
     const [index, setIndex] = useState(0);
     const [isWaving, setIsWaving] = useState(false);
-    const patience = 24000;
+    const patience = 60000;
 
-    // const boredLoop = () => {
-    //     timeout(patience).then(() => {
-    //         if(!isWaving) {
-    //             setIndex(bored);
-    //         }
-    //         boredLoop();
-    //     })
-    // }
+    const boredLoop = () => {
+        timeout(patience).then(() => {
+            if(!isWaving) {
+                setIndex(bored);
+            }
+            boredLoop();
+        })
+    }
 
     setIndexMethod = setIndex;
     useEffect(() => {
         setIndex(idle);
-        // boredLoop();
+        boredLoop();
     }, [])
 
     
@@ -71,11 +71,11 @@ function Model(props) {
 
 export default function CharacterModel() {
     return (
-        <Canvas dpr={[1,2]} shadowMap shadows camera={{fov: 0}}>
+        <Canvas dpr={[1,2]} shadowMap shadows camera={{fov:20}}>
             <ambientLight intensity={2.1}/>
-            <pointLight position={[-1,2,.5]} intensity={4} castShadow shadow-mapSize-height={512} shadow-mapSize-width={512}/>
+            <pointLight position={[1,1,1]} intensity={4} castShadow shadow-mapSize-height={512} shadow-mapSize-width={512}/>
             <Suspense fallback={<CharLoading />}>
-                <Model scale={2.5} position-y={-2.7} position-x={-2.2} rotation-x={.3} rotation-y={0.2} rotation-z={0} castShadow/>
+                <Model scale={.75} position-y={-.7} position-x={-.5} rotation-x={0} rotation-y={0.2} rotation-z={0} castShadow/>
             </Suspense>
             <OrbitControls enabled={false}/>
         </Canvas>
