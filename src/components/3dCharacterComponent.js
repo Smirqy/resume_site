@@ -8,7 +8,7 @@ const idle = 3;
 const wave = 4;
 const bored = 2;
 function Model(props) {
-    const avatar = useGLTF("./NoahAvatar_animation.glb");
+    const avatar = useGLTF("/NoahAvatar_animation.glb");
     const {actions, names} = useAnimations(avatar.animations, avatar.scene);
     const [index, setIndex] = useState(0);
     const [isWaving, setIsWaving] = useState(false);
