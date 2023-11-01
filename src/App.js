@@ -6,6 +6,8 @@ import ProjectsSection from './components/ProjectsSectionComponent';
 import ResumeSection from './components/ResumeSectionComponent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import CharacterModel from './components/3dCharacterComponent';
+import { setIndexMethod } from './components/3dCharacterComponent';
 import './App.css';
 
 function App() {
@@ -46,6 +48,10 @@ function App() {
         {/* <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5> */}
       </div>
       <div className="screen-container">
+        <div className="model-container">
+          <div className='model-selection' onClick={() => {setIndexMethod(4);}}/>
+          <CharacterModel />
+        </div>
         <div className="column-container">
           <div className="column column-left">
             <div className="menu-container">
@@ -57,11 +63,8 @@ function App() {
           
           </div>
           <div className="column column-middle">
+            {/* <img className="character" src={process.env.PUBLIC_URL + '/brute_breathing.gif'} alt="Character" /> */}
             <img className="shadow" src={process.env.PUBLIC_URL + '/shadow2.png'} alt="Shadow" />
-            <img className="character" src={process.env.PUBLIC_URL + '/character300new.gif'} alt="Character" />
-
-
-
           </div>
           <div className="column column-right">
             <h3 className="left clean-header display-header">{currSection.toUpperCase()}</h3>
