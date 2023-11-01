@@ -1,7 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import { useGLTF, OrbitControls, useAnimations} from '@react-three/drei';
 import { Suspense, useEffect, useState} from 'react';
-import { CharLoading } from './CharLoading';
 
 export var setIndexMethod = null;
 
