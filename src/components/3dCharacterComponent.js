@@ -1,18 +1,24 @@
 import { Canvas } from '@react-three/fiber';
 import { useGLTF, OrbitControls, useAnimations} from '@react-three/drei';
 import { useEffect, useState} from 'react';
+import * as THREE from 'three';
 
 export var setIndexMethod = null;
 
-const idle = 3;
-const wave = 4;
+const idle = 4;
+const wave = 7;
 const bored = 2;
+const dance = 3;
+const dying = 5;
+const standing_up = 6;
 function Model(props) {
-    const avatar = useGLTF(process.env.PUBLIC_URL + "/models/NoahAvatar_animation.glb");
+    const avatar = useGLTF(process.env.PUBLIC_URL + "/models/NoahAvatar3.glb");
     const {actions, names} = useAnimations(avatar.animations, avatar.scene);
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(idle);
     const [isWaving, setIsWaving] = useState(false);
     const patience = 60000;
+
+    actions[names[dying]].getMixer().addEventListener('finished', (e) => {console.log("HIT!");actions[names[index]]?.crossFadeTo(actions[names[standing_up]], 0).play(); });
 
     const boredLoop = () => {
         timeout(patience).then(() => {
@@ -33,11 +39,11 @@ function Model(props) {
 
     useEffect(() => {
         if(index === wave) {
-            actions[names[index]]?.reset().fadeIn(1).play();
             setIsWaving(true);
+            actions[names[index]]?.reset().fadeIn(1).play();
             timeout(5000).then(() => {
                 actions[names[index]]?.reset().fadeOut(1).play();
-                timeout(1500).then(() => {
+                timeout(1050).then(() => {
                     setIndex(idle);
                     setIsWaving(false);
                 })
@@ -51,6 +57,23 @@ function Model(props) {
             timeout(12000).then(() => {
                 actions[names[index]]?.fadeOut(1).play();
                 timeout(1500).then(() => {
+                    setIndex(idle);
+                })
+            })
+        }
+        else if(index === dying) {
+            setIsWaving(true);
+            actions[names[index]]?.reset().fadeIn(1).setLoop(THREE.LoopOnce).play();
+            // timeout(4000).then(() => {
+            //     setIndex(standing_up);
+            // })
+        }
+        else if(index === standing_up) {
+            actions[names[index]].play();
+            timeout(6950).then(() => {
+                actions[names[index]]?.fadeOut(1).play();
+                timeout(1000).then(() => {
+                    setIsWaving(false);
                     setIndex(idle);
                 })
             })

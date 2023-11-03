@@ -15,7 +15,7 @@ function App() {
  const [currSection, setCurrSection] = useState('about');
 
   const getSection = () => {
-    console.log("SETTING SECTION ", currSection);
+    
     if(currSection === 'about') {
       return (
         <AboutSection />
@@ -48,11 +48,10 @@ function App() {
         {/* <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5> */}
       </div>
       <div className="screen-container">
+        <div className='model-selection' onClick={() => {Math.random() > 0 ? setIndexMethod(7): setIndexMethod(5)}}/> 
         <div className="model-container">
-          <div className='model-selection' onClick={() => {setIndexMethod(4);}}/>
-            <CharacterModel />
-            <div className="TESTS"/>
-          </div>
+          <CharacterModel />
+        </div>
         <div className="column-container">
           <div className="column column-left">
             <div className="menu-container">
