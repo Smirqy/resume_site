@@ -94,7 +94,9 @@
   color:#004aad;
   font-weight: 500;
 }
-
+.display-subheader {
+  font-weight: 500;
+}
 .display-text {
   font-weight: 400;
 }

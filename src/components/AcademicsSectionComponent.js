@@ -1,9 +1,11 @@
 function AcademicsSection() {
     return (
         <div>
-        <h2>Courses</h2>
-        <h4>Cumulative GPA: 3.7</h4>
-        <h3>Major Specific</h3>
+        <h2 className="left clean-header display-header">{"ACADEMICS"}</h2>
+        <h3 className="display-subheader">Cumulative GPA: 3.7</h3>
+
+        <h3 className="display-subheader">Courses</h3>
+        <h4 className="display-subheader">Major Specific</h4>
         <ul>
             <li>Models of Computation</li>
             <li>Machine Learning</li>
@@ -25,7 +27,7 @@ function AcademicsSection() {
             <li>Intro To Algorithms and Data Structures</li>
             <li>Object Oriented Programming</li>
         </ul>
-        <h3>Non-Major</h3>
+        <h3 className="display-subheader">Non-Major</h3>
         <ul>
             <li>Scientific Writing</li>
             <li>Physics I</li>
@@ -34,7 +36,7 @@ function AcademicsSection() {
             <li>Digital Content Creation</li>
             <li>Non-major Basic Drawing</li>
         </ul>
-        <h3>Awards</h3>
+        <h3 className="display-subheader">Awards</h3>
         <ul>
             <li>Dean's List: Fa' 19, Fa' 21, Fa' 22, Sp' 23</li>
             <li>Athletics Director Honor Roll, Fall 2019 - Spring 2021</li>

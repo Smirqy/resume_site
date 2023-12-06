@@ -1,6 +1,7 @@
 function ProjectsSection() {
     return (
         <div>
+            <h3 className="left clean-header display-header">{"PROJECTS"}</h3>
             <h3>SplitIt</h3>
             <h4>Overview</h4>
             <p>SplitIt is a cost splitting app created for the iPhone. The app is composed of a React Native JS frontend, a Firebase Backend, and Firebase FireStore as the Database.

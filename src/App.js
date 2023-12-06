@@ -17,7 +17,7 @@ function App() {
   const getSection = () => {
     
     if(currSection === 'about') {
-      return (
+      return ( 
         <AboutSection />
       );
     }
@@ -67,7 +67,6 @@ function App() {
             {/* <img className="shadow" src={process.env.PUBLIC_URL + '/shadow2.png'} alt="Shadow" /> */}
           </div>
           <div className="column column-right">
-            <h3 className="left clean-header display-header">{currSection.toUpperCase()}</h3>
             <div className='text-container'>
               {getSection()}
             </div>
