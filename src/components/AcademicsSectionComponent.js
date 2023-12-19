@@ -2,8 +2,17 @@ function AcademicsSection() {
     return (
         <div>
         <h2 className="left clean-header display-header">{"ACADEMICS"}</h2>
+        <hr className="header-hr"/>
         <h3 className="display-subheader">Cumulative GPA: 3.7</h3>
-
+        <h3 className="display-subheader">Awards</h3>
+        <ul>
+            <li>Dean's List: Fa' 19, Fa' 21, Fa' 22, Sp' 23</li>
+            <li>Athletics Director Honor Roll, Fall 2019 - Spring 2021</li>
+            <li>PAC-12 All-Academic, 2020-2021</li>
+            <li>Utah Men's Swim and Dive Most Improved Male 2020</li>
+            <li>International Baccalaureate Diploma Recipient</li>
+            <li>High School Valedictorian</li>
+        </ul>
         <h3 className="display-subheader">Courses</h3>
         <h4 className="display-subheader">Major Specific</h4>
         <ul>
@@ -24,28 +33,20 @@ function AcademicsSection() {
             <li>Discrete Structures</li>
             <li>Software Practice I</li>
             <li>Calculus II</li>
+            <li>Physics I</li>
             <li>Intro To Algorithms and Data Structures</li>
             <li>Object Oriented Programming</li>
         </ul>
         <h3 className="display-subheader">Non-Major</h3>
         <ul>
             <li>Scientific Writing</li>
-            <li>Physics I</li>
             <li>Biology I</li>
             <li>Spanish 1010</li>
             <li>Digital Content Creation</li>
             <li>Non-major Basic Drawing</li>
         </ul>
-        <h3 className="display-subheader">Awards</h3>
-        <ul>
-            <li>Dean's List: Fa' 19, Fa' 21, Fa' 22, Sp' 23</li>
-            <li>Athletics Director Honor Roll, Fall 2019 - Spring 2021</li>
-            <li>PAC-12 All-Academic, 2020-2021</li>
-            <li>Utah Men's Swim and Dive Most Improved Male 2020</li>
-            <li>International Baccalaureate Diploma Recipient</li>
-            <li>High School Valedictorian</li>
-        </ul>
         </div>
+        
     )
 }
 

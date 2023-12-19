@@ -48,7 +48,7 @@ function App() {
         {/* <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5> */}
       </div>
       <div className="screen-container">
-        <div className='model-selection' onClick={() => {Math.random() > 0 ? setIndexMethod(7): setIndexMethod(5)}}/> 
+        <div className='model-selection' onClick={() => {Math.random() > 0.5 ? setIndexMethod(7): setIndexMethod(5)}}/> 
         <div className="model-container">
           <CharacterModel />
         </div>

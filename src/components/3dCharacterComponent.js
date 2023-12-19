@@ -12,13 +12,18 @@ const dance = 3;
 const dying = 5;
 const standing_up = 6;
 function Model(props) {
-    const avatar = useGLTF(process.env.PUBLIC_URL + "/models/NoahAvatar3.glb");
+    const avatar = useGLTF(process.env.PUBLIC_URL + "/models/NoahAvatar4.glb");
     const {actions, names} = useAnimations(avatar.animations, avatar.scene);
     const [index, setIndex] = useState(idle);
     const [isWaving, setIsWaving] = useState(false);
     const patience = 60000;
 
-    actions[names[dying]].getMixer().addEventListener('finished', (e) => {console.log("HIT!");actions[names[index]]?.crossFadeTo(actions[names[standing_up]], 0).play(); });
+    actions[names[dying]].getMixer().addEventListener('finished', (e) => {
+        actions[names[dying]]?.fadeOut(1).stop();
+        setIndex(idle);
+        setIsWaving(false);
+        
+    });
 
     const boredLoop = () => {
         timeout(patience).then(() => {
@@ -40,7 +45,7 @@ function Model(props) {
     useEffect(() => {
         if(index === wave) {
             setIsWaving(true);
-            actions[names[index]]?.reset().fadeIn(1).play();
+            actions[names[index]]?.fadeIn(1).play();
             timeout(5000).then(() => {
                 actions[names[index]]?.reset().fadeOut(1).play();
                 timeout(1050).then(() => {
@@ -50,9 +55,20 @@ function Model(props) {
             })
         }
         else if(index === idle) {
-            actions[names[index]]?.reset().fadeIn(1).play();
+            actions[names[index]]?.reset().fadeIn().play();
         }
         else if(index === bored) {
+            if(!isWaving) {
+                actions[names[index]]?.reset().fadeIn(1).play();
+                timeout(12000).then(() => {
+                    actions[names[index]]?.fadeOut(1).play();
+                    timeout(1500).then(() => {
+                        setIndex(idle);
+                    })
+                })
+            }
+        }
+        else if(index === dance) {
             actions[names[index]]?.reset().fadeIn(1).play();
             timeout(12000).then(() => {
                 actions[names[index]]?.fadeOut(1).play();
@@ -63,20 +79,13 @@ function Model(props) {
         }
         else if(index === dying) {
             setIsWaving(true);
-            actions[names[index]]?.reset().fadeIn(1).setLoop(THREE.LoopOnce).play();
-            // timeout(4000).then(() => {
-            //     setIndex(standing_up);
+            // actions[names[index]]?.reset().fadeIn(1).play();
+            // timeout(10000).then(() => {
+            //     console.log("finished dying");
+            //     setIndex(idle);
+            //     setIsWaving(false);
             // })
-        }
-        else if(index === standing_up) {
-            actions[names[index]].play();
-            timeout(6950).then(() => {
-                actions[names[index]]?.fadeOut(1).play();
-                timeout(1000).then(() => {
-                    setIsWaving(false);
-                    setIndex(idle);
-                })
-            })
+            actions[names[index]]?.reset().fadeIn(1).setLoop(THREE.LoopOnce).play();
         }
 
         return () => {
