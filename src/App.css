@@ -93,12 +93,46 @@
 .display-header {
   color:#004aad;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 .display-subheader {
   font-weight: 500;
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 .display-text {
   font-weight: 400;
+}
+.ulist {
+  margin-top: 10px; 
+  list-style: none;
+}
+.ulist li::before {
+  content: "\2022";
+  color: #5de0d6;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+.resume-list {
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  padding-left: 20px;
+}
+
+.resume-list li {
+  margin: 3px;
+}
+
+.resume-overview-list{
+  padding-left: 50px;
+}
+
+.bold-first {
+  font-weight: 500;
 }
 
 .text-container {

@@ -5,7 +5,7 @@ function AcademicsSection() {
         <hr className="header-hr"/>
         <h3 className="display-subheader">Cumulative GPA: 3.7</h3>
         <h3 className="display-subheader">Awards</h3>
-        <ul>
+        <ul className="ulist">
             <li>Dean's List: Fa' 19, Fa' 21, Fa' 22, Sp' 23</li>
             <li>Athletics Director Honor Roll, Fall 2019 - Spring 2021</li>
             <li>PAC-12 All-Academic, 2020-2021</li>
@@ -15,7 +15,7 @@ function AcademicsSection() {
         </ul>
         <h3 className="display-subheader">Courses</h3>
         <h4 className="display-subheader">Major Specific</h4>
-        <ul>
+        <ul className="ulist">
             <li>Models of Computation</li>
             <li>Machine Learning</li>
             <li>Database Systems</li>
@@ -37,8 +37,8 @@ function AcademicsSection() {
             <li>Intro To Algorithms and Data Structures</li>
             <li>Object Oriented Programming</li>
         </ul>
-        <h3 className="display-subheader">Non-Major</h3>
-        <ul>
+        <h4 className="display-subheader">Non-Major</h4>
+        <ul className="ulist">
             <li>Scientific Writing</li>
             <li>Biology I</li>
             <li>Spanish 1010</li>
