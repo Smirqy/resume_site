@@ -9,6 +9,7 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import CharacterModel from './components/3dCharacterComponent';
 import { setIndexMethod } from './components/3dCharacterComponent';
 import './App.css';
+import PlatformerGame from "./components/PlatformerComponent";
 
 function App() {
 
@@ -66,9 +67,12 @@ function App() {
             {/* <img className="character" src={process.env.PUBLIC_URL + '/brute_breathing.gif'} alt="Character" /> */}
             {/* <img className="shadow" src={process.env.PUBLIC_URL + '/shadow2.png'} alt="Shadow" /> */}
           </div>
-          <div className="column column-right">
-            <div className='text-container'>
-              {getSection()}
+          <div className='column column-right-wrapper'>
+            <div className="column-right">
+            {/* <PlatformerGame /> */}
+              <div className='text-container'>
+                {getSection()}
+              </div>
             </div>
           </div>
         </div>
