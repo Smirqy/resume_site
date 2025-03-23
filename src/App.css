@@ -31,7 +31,7 @@
 }
 
 .screen-container {
-  height: calc(100vh - 45px);
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .column-container {
@@ -95,7 +95,7 @@
 }
 
 .column-right-wrapper.shifted {
-  transform: translateY(calc(100vh - 85px)); /* Adjust as needed */
+  transform: translateY(calc((var(--vh, 1vh) * 100) - 85px)); /* Adjust as needed */
 }
 
 .menu-container {
@@ -210,7 +210,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 90;
+  z-index: 0;
 }
 
 .model-selection {
@@ -289,6 +289,7 @@
     overflow-y: scroll;
     height: 100%;
     font-weight: 400;
+    z-index: 100;
   }
 
   .model-selection {

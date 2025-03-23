@@ -38,10 +38,24 @@ export function useWindowHeight() {
 
 function App() {
 
+  
+
   const [currSection, setCurrSection] = useState('about');
   const [isShiftedDown, setIsShiftedDown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const windowWidth = useWindowWidth();
+
+  useEffect(() => {
+    const setScreenHeight = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+  
+    setScreenHeight();
+  
+    window.addEventListener('resize', setScreenHeight);
+    return () => window.removeEventListener('resize', setScreenHeight);
+  }, []);
 
   useEffect(() => {
     setMenuOpen(false)
