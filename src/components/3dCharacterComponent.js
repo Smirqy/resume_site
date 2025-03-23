@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { useGLTF, OrbitControls, useAnimations } from '@react-three/drei';
 import { useEffect, useState, useRef } from 'react';
 import * as THREE from 'three';
+import { useWindowWidth, useWindowHeight } from '../App';
 
 export var setIndexMethod = null;
 
@@ -27,11 +28,6 @@ function Model(props) {
         startBoredLoop();
     }, []);
 
-    // Prevent multiple state updates
-    const setAnimationState = (state) => {
-        if (isAnimating) return; // Don't interrupt ongoing animations
-        setCurrentState(state);
-    };
 
     useEffect(() => {
         setIndexMethod = (state) => {
@@ -99,15 +95,51 @@ function Model(props) {
     );
 }
 
+function getModelX(width, height) {
+    let x = 0;
+    if (height < 1000) {
+        const min = 780;
+        const max = 1180;
+        const start = -0.25;
+        const end = -0.5;
+    
+        const clampedWidth = Math.min(Math.max(width, min), max);
+        const t = (clampedWidth - min) / (max - min);
+        x = start + t * (end - start);
+    }
+    else {
+        const min = 1000;
+        const max = 1700;
+        const start = -0.1;
+        const end = -0.5;
+    
+        const clampedWidth = Math.min(Math.max(width, min), max);
+        const t = (clampedWidth - min) / (max - min);
+        x = start + t * (end - start);
+    }
+    return x;
+}
+
 export default function CharacterModel() {
-    return (
+    const width = useWindowWidth();
+    const height = useWindowHeight();
+    return width > 768 ? (
         <Canvas dpr={[1, 2]} shadowMap shadows camera={{ fov: 20 }}>
             <ambientLight intensity={2.1} />
             <pointLight position={[1, 1, 1]} intensity={4} castShadow shadow-mapSize-height={512} shadow-mapSize-width={512} />
-            <Model scale={0.75} position-y={-0.7} position-x={-0.5} rotation-x={0} rotation-y={0.2} rotation-z={0} castShadow />
+            <Model scale={0.75} position-y={-0.7} position-x={getModelX(width, height)} rotation-x={0} rotation-y={0.2} rotation-z={0} castShadow />
             <OrbitControls enabled={false} />
         </Canvas>
-    );
+    ): 
+    (
+        <Canvas dpr={[1, 2]} shadowMap shadows camera={{ fov: 20 }}>
+            <ambientLight intensity={2.1} />
+            <pointLight position={[1, 1, 1]} intensity={4} castShadow shadow-mapSize-height={512} shadow-mapSize-width={512} />
+            <Model scale={0.75} position-y={-0.7} position-x={0} rotation-x={0} rotation-y={0.2} rotation-z={0} castShadow />
+            <OrbitControls enabled={false} />
+        </Canvas>
+    )
+    
 }
 
 

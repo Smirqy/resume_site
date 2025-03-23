@@ -27,24 +27,27 @@ const PlatformerGame = () => {
     let game = new Phaser.Game(config);
 
     function preload() {
-      this.load.image("sky", "https://examples.phaser.io/assets/skies/sky2.png");
+      this.load.image("sky", process.env.PUBLIC_URL + "/GameAssets/sky.png");
       this.load.image("ground", "https://examples.phaser.io/assets/platform.png");
       this.load.image("player", "https://examples.phaser.io/assets/sprites/phaser-dude.png");
     }
 
     function create() {
-      this.add.image(400, 300, "sky");
+        this.add.image(400, 300, "sky");
 
-      let platforms = this.physics.add.staticGroup();
-      platforms.create(400, 568, "ground").setScale(2).refreshBody();
-      
-      let player = this.physics.add.sprite(100, 450, "player");
-      player.setBounce(0.2);
-      player.setCollideWorldBounds(true);
-      this.physics.add.collider(player, platforms);
+        let platforms = this.physics.add.staticGroup();
+        platforms.create(400, 568, "ground").setScale(2).refreshBody();
+        platforms.create(600, 400, 'ground');
+        platforms.create(50, 250, 'ground');
+        platforms.create(750, 220, 'ground');
+        
+        let player = this.physics.add.sprite(100, 450, "player");
+        player.setBounce(0.2);
+        player.setCollideWorldBounds(true);
+        this.physics.add.collider(player, platforms);
 
-      this.cursors = this.input.keyboard.createCursorKeys();
-      this.player = player;
+        this.cursors = this.input.keyboard.createCursorKeys();
+        this.player = player;
     }
 
     function update() {
