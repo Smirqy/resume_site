@@ -12,6 +12,12 @@
   overflow-y: hidden;
 }
 
+@supports (height: 100dvh) {
+  .App {
+    height: 100dvh;
+  }
+}
+
 .header-container {
     display: flex;
     flex-direction: column;
