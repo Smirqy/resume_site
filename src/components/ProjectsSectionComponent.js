@@ -27,7 +27,7 @@ function ProjectsSection() {
                 </li>
                 <li>Users can also add each other as friends and send notification reminders of payments that need to be made.</li>
             </ul>
-             <video autoPlay loop muted className="portfolio-video">
+             <video loop muted className="portfolio-video">
                 <source src={process.env.PUBLIC_URL + '/SplitITDemo.mov'} type="video/mp4"></source>
             </video>
 
