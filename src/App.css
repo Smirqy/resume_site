@@ -1,7 +1,7 @@
 .App {
   background: linear-gradient(180deg, #ffffff, #777777);
   background-repeat: no-repeat;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   position: relative;
@@ -36,10 +36,6 @@
   font-size: 13px;
 }
 
-.screen-container {
-  height: calc(var(--vh, 1vh) * 100);
-}
-
 .column-container {
   flex: 11;
   display: flex;
@@ -65,7 +61,7 @@
 
 .column-right {
   flex: 2;
-  background-color: rgba(235, 235, 235, 0.90);
+  background-color: rgba(235, 235, 235);
   box-sizing: border-box;
   padding: 5px;
   padding:20px;
@@ -73,6 +69,7 @@
   height: 100%;
   position: relative;
   z-index: 100;
+  opacity: .90;
 }
 
 .column-middle {
@@ -277,7 +274,13 @@
   }
 
   .screen-container {
-    height: calc(100vh - 45px);
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  @supports (height: 100dvh) {
+    .screen-container {
+      height: calc(100dvh - 45px);
+    }
   }
 
   .column-right-wrapper {
