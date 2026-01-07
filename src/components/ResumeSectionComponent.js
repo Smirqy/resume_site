@@ -1,10 +1,10 @@
 function ResumeSection() {
     const handleDownload = () => {
         // Replace 'your-file-path' with the actual path to your file
-        const filePath = process.env.PUBLIC_URL + '/Noah_Carlson_Resume.pdf';
+        const filePath = process.env.PUBLIC_URL + '/Noah_Carlson_Resume.docx';
         const link = document.createElement('a');
         link.href = filePath;
-        link.download = 'Noah_Carlson_Resume.pdf'; // Change the name of the downloaded file if needed
+        link.download = 'Noah_Carlson_Resume.docx'; // Change the name of the downloaded file if needed
         link.click();
       };
 
