@@ -1,3 +1,8 @@
+:root {
+  --primary-color:#1c31bb;
+  --secondary-color:#1c31bb;
+}
+
 .App {
   background: linear-gradient(180deg, #ffffff, #777777);
   background-repeat: no-repeat;
@@ -5,10 +10,10 @@
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   position: relative;
-  background-image: url(/public/moderncity.jpg);
+  background-image: url(/public/character_display.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: top center;
+  background-position: center top;
   overflow-y: hidden;
 }
 
@@ -120,7 +125,7 @@
 
 
 .display-header {
-  color:#004aad;
+  color: var(--primary-color);
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -132,13 +137,18 @@
 .display-text {
   font-weight: 400;
 }
+.contact-ulist {
+  list-style: none;
+  padding-left: 0;
+  margin: 0px;
+}
 .ulist {
   margin-top: 10px; 
   list-style: none;
 }
 .ulist li::before {
   content: "\2022";
-  color: #5de0d6;
+  color: var(--secondary-color);
   font-weight: bold;
   display: inline-block; 
   width: 1em;
@@ -167,7 +177,7 @@
 .text-container {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: calc(100% - 50px);
+  height: 100%;
   font-weight: 400;
 }
 
@@ -177,14 +187,14 @@
 }
 
 .text-container::-webkit-scrollbar-thumb {
-  background: #5de0d6;
+  background: var(--secondary-color);
 
 }
 .text-container::-webkit-scrollbar-track {
 }
 
 .text-container::-webkit-scrollbar-thumb:hover {
-  background: #004aad;
+  background: var(--primary-color);
 }
 
 .opacity-50 {
@@ -249,7 +259,7 @@
 }
 
 .download-button {
-  background: #004aad;
+  background: var(--primary-color);
   border: none;
   color: white;
   /* margin-left: 20px; */
@@ -265,7 +275,7 @@
 
 .download-button:hover {
   cursor: pointer;
-  background: #5de0d6;
+  background: var(--secondary-color);
 }
 
 

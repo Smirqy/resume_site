@@ -86,24 +86,24 @@ function App() {
 
   return (
     <div className="App">
-    {windowWidth > 768 ? (
+    {/* {windowWidth > 768 ? (
       <div className="header-container">
         <h3 className='clean-header font-weight-300'>NOAH CARLSON <span className="subHeader-text"> LEVEL 24
           <FontAwesomeIcon icon={faCaretDown} className='subheader-icon' size=''/>
         </span></h3>
-        {/* <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5> */}
+        <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5>
       </div>):
       (
         <div className="header-container">
           <h3 className='clean-header font-weight-300'>NOAH CARLSON <span className="subHeader-text"> LEVEL 24
             <FontAwesomeIcon icon={faCaretDown} className='subheader-icon' size=''/>
           </span></h3>
-          {/* <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5> */}
+          <h5 className='clean-header opacity-50 font-weight-300'>Software Engineer</h5>
           <div className='menu-button-wrapper' onClick={() => setMenuOpen(prev => !prev)}>
             <FontAwesomeIcon icon={faBars} className='menu-button'/>
           </div>
         </div>
-      )}
+      )} */}
       {windowWidth > 768 ? (
       <div className="screen-container">
         <div className='model-selection' onClick={() => {Math.random() > 0.5 ? setIndexMethod(7): setIndexMethod(5)}}/> 

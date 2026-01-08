@@ -4,12 +4,11 @@ function AboutSection() {
     <div>
         <h1 className="left clean-header display-header">Hi, I'm Noah Carlson</h1>
         <p> 
-        I am a graduated Computer Science student at the University of Utah and am currently looking for career opportunities. 
+        I am a graduated Master's of Computer Science student at the University of Utah and am currently looking for career opportunities. 
         </p>
         <p>
-        Over my time at the University of Utah I have been able to work on a variety of projects that have allowed me to explore my interests in
-        computer science. I have worked on projects ranging from web development to machine learning and have found that the
-        creativity and problem solving excites me and is what drives me to accomplish my next project. 
+        Over my time at the University of Utah I have been able to work on a variety of projects that allowed me to find my passion of creation and creative problem solving. 
+        I have worked on projects ranging from web development to machine learning and have found that the act of working towards a longterm goal and seeing it through to completion is what drives me. 
         </p>
         <p>
         Along with the software development problems I have also constantly practiced setting goals and working tirelessly to achieve them.
@@ -24,7 +23,10 @@ function AboutSection() {
         </p>
         <p style={{color:'#004aad'}}>-</p>
          <p> Please feel free to contact me at any time. </p>
-         <p>Email: Noahrk14@gmail.com</p>
+         <ul className="contact-ulist">
+            <li>Email: Noahrk14@gmail.com</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/noahcarlson14">https://www.linkedin.com/in/noahcarlson14/</a></li>
+         </ul>
      </div>
     );
 }

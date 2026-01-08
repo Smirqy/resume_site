@@ -4,6 +4,9 @@ function ProjectsSection() {
             <h2 className="left clean-header display-header">{"PROJECTS"}</h2>
             <hr className="header-hr"/>
             <h3 className="display-subheader">Split It</h3>
+            <video loop muted className="portfolio-video">
+                <source src={process.env.PUBLIC_URL + '/SplitITDemo.mov'} type="video/mp4"></source>
+            </video>
             <h4 className="display-subheader">Overview</h4>
             <p>SplitIt is a cost splitting app created for the iPhone. The app is composed of a React Native JS frontend, a Firebase Backend, and Firebase FireStore as the Database.
             The App allows users to create groups, add friends, and split costs between them.</p>
@@ -27,11 +30,10 @@ function ProjectsSection() {
                 </li>
                 <li>Users can also add each other as friends and send notification reminders of payments that need to be made.</li>
             </ul>
-             <video loop muted className="portfolio-video">
-                <source src={process.env.PUBLIC_URL + '/SplitITDemo.mov'} type="video/mp4"></source>
-            </video>
+             
 
             <h3 className="display-subheader">Portfolio Website</h3>
+            <img src={process.env.PUBLIC_URL + '/Blender.png'} alt="Blender" className="portfolio-img" />
             <h4 className="display-subheader">Overview</h4>
             <p>This is this website! This website is a ReactJs Web app with CSS styling hosted on AWS Amplify. It displays the portfolio of Noah Carlson
             in a avatar selection screen style.</p>
@@ -39,9 +41,8 @@ function ProjectsSection() {
             <h4 className="display-subheader">Functionalities</h4>
             <p>The layout and look of the website is custom made with CSS. The avatar was created using Ready Player Me, animated using Mixamo and Blender, and finally rendered on page using
              React three. The link interaction animations are created through CSS and the avatar interactions are made using javascript.</p>
-            <img src={process.env.PUBLIC_URL + '/Blender.png'} alt="Blender" className="portfolio-img" />
 
-            <h3 className="display-subheader">Server Based Spreadsheet App</h3>
+            {/* <h3 className="display-subheader">Server Based Spreadsheet App</h3>
             <p>Currently under construction...</p>
 
             <h3 className="display-subheader">TA Application Website</h3>
@@ -51,7 +52,7 @@ function ProjectsSection() {
             <p>Currently under construction...</p>
 
             <h3 className="display-subheader">Third Person Game</h3>
-            <p>Currently under construction...</p>
+            <p>Currently under construction...</p> */}
 
 
 
