@@ -17,16 +17,30 @@ function ResumeSection() {
             <button className="download-button" onClick={handleDownload}>Download</button>
             {/* <a href="https://docs.google.com/document/d/1H6hLrKS-BRqscl6EAaEpt3FgsIQwbZO9VQ5Hw3MguEA/edit?usp=sharing">View Resume</a> */}
             <p>Or view it right here - </p>
-            <h3 className="display-header">Education</h3>
-            <h4 className="display-subheader">University of Utah</h4>
+
+            <h3 className="display-header">Skills</h3>
             <ul className="resume-list">
-                <li>Title: BCS Computer Science</li>
+                <li><span className="bold-first">Back End:</span> Python, Java, C#, C++, C, SQL, Node.js</li>
+                <li><span className="bold-first">Front End:</span> React, Angular, React Native, HTML, CSS, JavaScript</li>
+                <li><span className="bold-first">Tools and Technologies:</span> Supabase, AWS (S3, EC2), Hugging Face</li>
+                <li><span className="bold-first">AI/ML:</span> Prompt engineering, OpenAI API, scikit-learn, pandas, PyTorch</li>
+            </ul>
+
+            <h3 className="display-header">Education</h3>
+            <h4 className="display-subheader">University of Utah - M.S. Computer Science</h4>
+            <ul className="resume-list">
+                <li>Location: Salt Lake City, UT</li>
+                <li>Date: August 2024 - December 2025</li>
+                <li>GPA: 3.9/4.0</li>
+            </ul>
+            <h4 className="display-subheader">University of Utah - B.S. Computer Science</h4>
+            <ul className="resume-list">
                 <li>Location: Salt Lake City, UT</li>
                 <li>Date: August 2019 - December 2023</li>
-                <li>Overview:</li>
+                <li>GPA: 3.7/4.0</li>
+                <li>Extracurriculars:</li>
             </ul>
             <ul className="ulist resume-overview-list" style={{marginTop:0}}>
-                <li>3.7 Cumulative GPA</li>
                 <li>NCAA Swim and Dive Student Athlete, Fall 2019 - Spring 2023 </li>
                 <li>Athletics Director Honor Roll, Fall 2019 - Spring 2021</li>
                 <li>Pac-12 All-Academic, 2020-2021</li>
@@ -42,7 +56,44 @@ function ResumeSection() {
                 <li>Overview:</li>
             </ul>
             <ul className="ulist resume-overview-list" style={{marginTop:0}}>
-                <li>Run course labs, help students 1 on 1 during help hours, and grade assignments</li>
+                <li>Led labs for 80+ students with live demos, Q&A, and group guidance.</li>
+                <li>Mentored 15 capstone teams through recurring check-ins, technical Q&A, and project reviews.</li>
+            </ul>
+
+            <h4 className="display-subheader">Motorola Solutions</h4>
+            <ul className="resume-list">
+                <li>Title: Software Development Intern</li>
+                <li>Location: West Valley City, UT</li>
+                <li>Date: May 2025 - August 2025</li>
+                <li>Overview:</li>
+            </ul>
+            <ul className="ulist resume-overview-list" style={{marginTop:0}}>
+                <li>Updated and modernized 10,000+ Java tests across multiple teams, leveraging AI-assisted refactoring and validation.
+                </li>
+            </ul>
+
+            <h4 className="display-subheader">Motorola Solutions</h4>
+            <ul className="resume-list">
+                <li>Title: Software Development Intern</li>
+                <li>Location: West Valley City, UT</li>
+                <li>Date: May 2024 - August 2024</li>
+                <li>Overview:</li>
+            </ul>
+            <ul className="ulist resume-overview-list" style={{marginTop:0}}>
+                <li>Designed a Python testing suite for 20+ API endpoints and built an Angular dashboard for visualization; modeled test data for 100+ endpoints to improve QA automation.</li>
+            </ul>
+
+            <h4 className="display-subheader">Prime Presence</h4>
+            <ul className="resume-list">
+                <li>Title: Freelance Developer</li>
+                <li>Location: Salt Lake City, UT</li>
+                <li>Date: February 2024 - May 2024</li>
+                <li>Overview:</li>
+            </ul>
+            <ul className="ulist resume-overview-list" style={{marginTop:0}}>
+                <li>Developed a custom website generator using Python scripts to transform client information into live, production-ready sites.</li>
+                <li>Built client-facing websites with React and implemented a Node.js email server hosted on AWS to handle customer inquiries.</li>
+                <li>Designed and deployed scalable infrastructure to support hundreds of new business websites per month.</li>
             </ul>
 
             <h4 className="display-subheader">Motorola Solutions</h4>
@@ -130,6 +181,36 @@ function ResumeSection() {
                 <li>Athletics Director Honor Roll, Fall 2019 - Spring 2021</li>
                 <li>Pac-12 All-Academic, 2020-2021</li>
             </ul> */}
+
+            <h3 className="display-header">Coursework</h3>
+            <ul className="ulist resume-overview-list">
+                <li>Machine Learning</li>
+                <li>Artificial Intelligence</li>
+                <li>Natural Language Processing</li>
+                <li>Data Mining</li>
+                <li>Network Security</li>
+                <li>Data Analysis</li>
+                <li>Robotics Motion Planning</li>
+                <li>Computational Geometry</li>
+                <li>Graduate Computer Architecture</li>
+            </ul>
+
+            <h3 className="display-header">Honors and Awards</h3>
+            <ul className="ulist resume-overview-list">
+                <li>Utah Men's Swim and Dive: Most Improved Male (2020)</li>
+                <li>International Baccalaureate Diploma</li>
+                <li>High School Valedictorian</li>
+            </ul>
+
+            <h3 className="display-header">Interests</h3>
+            <ul className="ulist resume-overview-list">
+                <li>Competitive swimming (2012 - 2023)</li>
+                <li>Climbing</li>
+                <li>Gaming</li>
+                <li>Drawing</li>
+                <li>Snowboarding</li>
+                <li>Traveling</li>
+            </ul>
         </div>
     )
 }
