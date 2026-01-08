@@ -7,19 +7,29 @@
   background: linear-gradient(180deg, #ffffff, #777777);
   background-repeat: no-repeat;
   height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   position: relative;
   background-image: url(/public/character_display.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center top;
+  background-attachment: fixed;
   overflow-y: hidden;
 }
 
 @supports (height: 100dvh) {
   .App {
     height: 100dvh;
+    min-height: 100dvh;
+  }
+}
+
+@supports (height: 100svh) {
+  .App {
+    min-height: 100svh;
   }
 }
 
@@ -280,6 +290,13 @@
 
 
 @media (max-width: 768px) {
+  .App {
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+
   .header-container {
     display: flex;
     flex-direction: row;
