@@ -26,6 +26,7 @@ function AboutSection() {
          <ul className="contact-ulist">
             <li>Email: Noahrk14@gmail.com</li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/noahcarlson14">https://www.linkedin.com/in/noahcarlson14/</a></li>
+            <li>GitHub: <a href="https://github.com/Smirqy">https://github.com/Smirqy</a></li>
          </ul>
      </div>
     );
